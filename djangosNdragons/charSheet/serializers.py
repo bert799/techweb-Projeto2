@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Race
+from .models import Character
 
-class RaceSerializer(serializers.ModelSerializer):
+class CharSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Race
-        fields = ['name', 'slug', 'desc', 'asi_desc', 'asi','age', 'alignment', 'size', 'speed','speed_desc', 'languages', 'vision', 'traits', 'subraces','document_slug', 'document_title', 'document_license_url']
+        model = Character
+        fields = ['name', 'race']
