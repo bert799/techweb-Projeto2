@@ -1,6 +1,5 @@
 from django.db.models.query_utils import subclasses
 from django.shortcuts import render, redirect
-#from .models import Note, Tag
 from .serializers import CharSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -24,8 +23,9 @@ def api_character(request):
     if request.method == 'POST':
         char = Character()
         new_char = request.data
-        char.name = new_char['name']
-        char.race = new_char['race']
+        char.name = new_char['nome']
+        char.race = new_char['raca']
+        char.playerClass = new_char['classe']
         char.save()
     
     serialized_sheet = CharSerializer(char, many=True)

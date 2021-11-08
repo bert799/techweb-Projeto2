@@ -4,3 +4,4 @@ from django.db import models
 class Character (models.Model):
     name = models.CharField(max_length=40)
     race = models.CharField(max_length=15)
+    playerClass = models.CharField(max_length=30)

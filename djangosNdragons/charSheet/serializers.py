@@ -4,4 +4,4 @@ from .models import Character
 class CharSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character
-        fields = ['name', 'race']
+        fields = ['name', 'race', 'playerClass']
