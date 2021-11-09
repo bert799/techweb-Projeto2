@@ -15,12 +15,12 @@ def index(request):
 @api_view(['GET', 'POST'])
 def api_character(request):
     try:
-        print(Character.objects.all())
-        char = Character.objects.all()
+        characters = Character.objects.all()
     except request.DoesNotExist:
         raise Http404()
 
     if request.method == 'POST':
+        print(request.data)
         char = Character()
         new_char = request.data
         char.name = new_char['nome']
@@ -28,5 +28,5 @@ def api_character(request):
         char.playerClass = new_char['classe']
         char.save()
     
-    serialized_sheet = CharSerializer(char, many=True)
+    serialized_sheet = CharSerializer(characters, many=True)
     return Response(serialized_sheet.data)
