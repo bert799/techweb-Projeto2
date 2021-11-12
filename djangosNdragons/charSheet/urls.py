@@ -5,7 +5,7 @@ from . import views
 
 
 router = routers.DefaultRouter()
-router.register('api/char', views.CharactersViewSet, basename='POgTeste')
+router.register('api/char', views.CharactersViewSet, basename='CharSheet')
 
 urlpatterns = [
     # path('', views.index, name='index'),
