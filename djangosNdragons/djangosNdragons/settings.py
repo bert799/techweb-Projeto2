@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fi0^aq@4jk-^8k7(0l6spu!hyb5#6__we2&k++8p#g9hi094g5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['secret-bastion19856.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['secret-bastion-19856.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
