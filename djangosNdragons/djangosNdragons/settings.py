@@ -24,11 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fi0^aq@4jk-^8k7(0l6spu!hyb5#6__we2&k++8p#g9hi094g5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['secret-bastion-19856.herokuapp.com', 'localhost/3000', '127.0.0.1']
 
-CORS_ORIGIN_ALLOW_ALL = True
+
 
 # Application definition
 
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'djangosNdragons.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://localhost/<NAME>?user=<USER>&password=<PASSWORD>',
+        default='postgresql://localhost/djangosndragons?user=dnduser&password=dndsenha',
         conn_max_age=600,
         ssl_require=not DEBUG
     )
@@ -129,3 +129,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_ALLOW_ALL = True
